@@ -33,7 +33,7 @@
             <a-assets></a-assets>
                 <a-asset-item
                     id="Rubber-asset"
-                    src="Rubber/asset.fbx"
+                    src="Rubber/asset.glb"
                 ></a-asset-item>
             </a-assets>
 
@@ -74,12 +74,6 @@
                     class="clickable"
                     gesture-handler
                 ></a-entity>
-                <a-text
-                    value="用手指轉動模型"
-                   scale="0.5 0.5 0.5"
-                   position="1 0 0 "
-                   color="red"
-                ></a-text>
 
 
             </a-marker>
@@ -97,7 +91,7 @@
                     id="Rubber-model"
                     scale="0.9829724494421218 0.9829724494421218 0.9829724494421218"
                     animation-mixer="loop: repeat"
-                    fbx-model="#Rubber-asset"
+                    gltf-model="#Rubber-asset"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
