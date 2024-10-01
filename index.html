@@ -36,6 +36,12 @@
                     src="Quayside/asset.glb"
                 ></a-asset-item>
             </a-assets>
+            <a-assets>
+                <a-asset-item
+                    id="Truck-asset"
+                    src="Truck/asset.glb"
+                ></a-asset-item>
+            </a-assets>
 
             <a-marker
                 type="pattern"
@@ -92,6 +98,26 @@
                     scale="0.9829724494421218 0.9829724494421218 0.9829724494421218"
                     animation-mixer="loop: repeat"
                     gltf-model="#Quayside-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+
+            </a-marker>
+
+             <a-marker
+                type="pattern"
+                preset="custom"
+                url="Truck/marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerD"
+            >
+                <a-entity
+                    id="Truck-model"
+                    scale="0.9829724494421218 0.9829724494421218 0.9829724494421218"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#Truck-asset"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
