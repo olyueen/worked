@@ -54,6 +54,18 @@
                     src="Rail/asset.glb"
                 ></a-asset-item>
             </a-assets>
+            <a-assets>
+                <a-asset-item
+                    id="Carrier-asset"
+                    src="Carrier/asset.glb"
+                ></a-asset-item>
+            </a-assets>
+            <a-assets>
+                <a-asset-item
+                    id="Side-asset"
+                    src="Side/asset.glb"
+                ></a-asset-item>
+            </a-assets>
 
             <a-marker
                 type="pattern"
@@ -175,6 +187,47 @@
                 ></a-entity>
 
             </a-marker>
+
+            <a-marker
+                type="pattern"
+                preset="custom"
+                url="Carrier/marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerG"
+            >
+                <a-entity
+                    id="Carrier-model"
+                    scale="0.9829724494421218 0.9829724494421218 0.9829724494421218"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#Carrier-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+
+            </a-marker>
+
+             <a-marker
+                type="pattern"
+                preset="custom"
+                url="Side/marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerH"
+            >
+                <a-entity
+                    id="Side-model"
+                    scale="0.9829724494421218 0.9829724494421218 0.9829724494421218"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#Side-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+
+            </a-marker>
+
 
             <a-entity camera></a-entity>
         </a-scene>
