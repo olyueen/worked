@@ -19,52 +19,15 @@
             gesture-detector
         >
             <a-assets>
-                <a-asset-item
-                    id="Forklift-asset"
-                    src="Forklift/asset.glb"
-                ></a-asset-item>
-            </a-assets>
-            <a-assets>
-                <a-asset-item
-                    id="Reach-asset"
-                    src="Reach/asset.glb"
-                ></a-asset-item>
-            </a-assets>
-            <a-assets>
-                <a-asset-item
-                    id="Quayside-asset"
-                    src="Quayside/asset.glb"
-                ></a-asset-item>
-            </a-assets>
-            <a-assets>
-                <a-asset-item
-                    id="Truck-asset"
-                    src="Truck/asset.glb"
-                ></a-asset-item>
-            </a-assets>
-            <a-assets>
-                <a-asset-item
-                    id="Rubber-asset"
-                    src="Rubber/asset.glb"
-                ></a-asset-item>
-            </a-assets>
-            <a-assets>
-                <a-asset-item
-                    id="Rail-asset"
-                    src="Rail/asset.glb"
-                ></a-asset-item>
-            </a-assets>
-            <a-assets>
-                <a-asset-item
-                    id="Carrier-asset"
-                    src="Carrier/asset.glb"
-                ></a-asset-item>
-            </a-assets>
-            <a-assets>
-                <a-asset-item
-                    id="Side-asset"
-                    src="Side/asset.glb"
-                ></a-asset-item>
+                <!-- Lazy Loading: 模型的初始 src 設置為空，等到檢測到標記後才設置 src -->
+                <a-asset-item id="Forklift-asset"></a-asset-item>
+                <a-asset-item id="Reach-asset"></a-asset-item>
+                <a-asset-item id="Quayside-asset"></a-asset-item>
+                <a-asset-item id="Truck-asset"></a-asset-item>
+                <a-asset-item id="Rubber-asset"></a-asset-item>
+                <a-asset-item id="Rail-asset"></a-asset-item>
+                <a-asset-item id="Carrier-asset"></a-asset-item>
+                <a-asset-item id="Side-asset"></a-asset-item>
             </a-assets>
 
             <a-marker
@@ -75,6 +38,7 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
+                event-set__marker="_event: markerFound; src: Forklift/asset.glb" 
             >
                 <a-entity
                     id="Forklift-model"
@@ -95,6 +59,7 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerB"
+                event-set__marker="_event: markerFound; src: Reach/asset.glb"
             >
                 <a-entity
                     id="Reach-model"
@@ -116,6 +81,7 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerC"
+                event-set__marker="_event: markerFound; src: Quayside/asset.glb"
             >
                 <a-entity
                     id="Quayside-model"
@@ -136,6 +102,7 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerD"
+                event-set__marker="_event: markerFound; src: Truck/asset.glb"
             >
                 <a-entity
                     id="Truck-model"
@@ -156,6 +123,7 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerE"
+                event-set__marker="_event: markerFound; src: Rubber/asset.glb"
             >
                 <a-entity
                     id="Rubber-model"
@@ -176,6 +144,7 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerF"
+                event-set__marker="_event: markerFound; src: Rail/asset.glb"
             >
                 <a-entity
                     id="Rail-model"
@@ -196,6 +165,7 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerG"
+                event-set__marker="_event: markerFound; src: Carrier/asset.glb"
             >
                 <a-entity
                     id="Carrier-model"
@@ -216,6 +186,7 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerH"
+                event-set__marker="_event: markerFound; src: Side/asset.glb"
             >
                 <a-entity
                     id="Side-model"
